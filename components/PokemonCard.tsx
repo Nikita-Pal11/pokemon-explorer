@@ -13,8 +13,7 @@ function PokemonCard({ pokemon }: { pokemon: pokemonDetails }) {
   const primaryType = pokemon.types?.[0]?.type?.name?.toLowerCase() || "normal";
   const style = typeStyles[primaryType] || defaultStyle;
 
-  const image =
-    pokemon.sprites?.other?.["official-artwork"]?.front_default
+  const image = pokemon.sprites?.other?.["official-artwork"]?.front_default;
 
   const formattedId = `#${String(pokemon.id).padStart(3, "0")}`;
 
