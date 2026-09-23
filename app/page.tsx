@@ -1,7 +1,7 @@
 import { getPokemonList, getPokemonDetails } from "@/lib/api";
 import { pokemon } from "@/types/pokemon";
 import PokemonGrid from "@/components/PokemonGrid";
-import PaginationLayout from "@/components/Pagination";
+import Pagination from "@/components/Pagination";
 
 export default async function Home({
   searchParams,
@@ -24,12 +24,12 @@ export default async function Home({
     <main className="relative flex h-[calc(100vh-4rem)] flex-col justify-center overflow-hidden">
       <img
         src="/bg.webp"
-        className="-z-10 absolute inset-0 h-full w-full object-cover opacity-30"
+        className="-z-10 absolute inset-0 h-full w-full opacity-30"
         alt=""
       />
-      <PaginationLayout currentPage={page} totalPages={totalPages}>
+      <Pagination currentPage={page} totalPages={totalPages}>
         <PokemonGrid pokemonDetails={pokemonDetails} />
-      </PaginationLayout>
+      </Pagination>
     </main>
   );
 }

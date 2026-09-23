@@ -111,3 +111,24 @@ export const typeStyles: Record<
     glow: "from-slate-500/15 via-zinc-500/10 to-transparent",
   },
 };
+
+export const typeBadgeColors: Record<string, string> = {
+  bug: "bg-lime-600 text-white",
+  poison: "bg-purple-600 text-white",
+  fire: "bg-orange-500 text-white",
+  flying: "bg-sky-400 text-white",
+  rock: "bg-amber-700 text-white",
+  psychic: "bg-pink-500 text-white",
+  water: "bg-blue-500 text-white",
+  grass: "bg-emerald-500 text-white",
+  electric: "bg-yellow-500 text-slate-900",
+  ice: "bg-cyan-400 text-slate-900",
+  dragon: "bg-indigo-600 text-white",
+  dark: "bg-slate-700 text-white",
+  fairy: "bg-rose-400 text-white",
+  normal: "bg-slate-400 text-white",
+  fighting: "bg-red-600 text-white",
+  ground: "bg-amber-600 text-white",
+  ghost: "bg-purple-800 text-white",
+  steel: "bg-slate-500 text-white",
+};

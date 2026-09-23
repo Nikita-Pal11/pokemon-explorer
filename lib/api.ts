@@ -17,3 +17,15 @@ export async function getPokemonDetails(url: string) {
   }
   return data;
 }
+
+export async function getPokemonById(id: string) {
+  const resp = await fetch(`${BASE_URL}/pokemon/${id}`);
+  if (!resp.ok) return null;
+  return resp.json();
+}
+
+export async function getPokemonSpecies(id: string) {
+  const resp = await fetch(`${BASE_URL}/pokemon-species/${id}`);
+  if (!resp.ok) return null;
+  return resp.json();
+}

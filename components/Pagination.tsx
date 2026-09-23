@@ -8,7 +8,7 @@ interface PaginationProps {
   children: React.ReactNode;
 }
 
-function PaginationLayout({
+function Pagination({
   currentPage,
   totalPages,
   children,
@@ -55,4 +55,4 @@ function PaginationLayout({
   );
 }
 
-export default PaginationLayout;
+export default Pagination;
