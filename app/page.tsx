@@ -20,7 +20,7 @@ export default async function Home({
   let totalPages = 1;
 
   if (searchQuery) {
-    const listData = await getPokemonList(200, 0);
+    const listData = await getPokemonList(500, 0);
     const filteredResults = listData.results.filter((p: pokemon) => {
       const pokemonId = p.url.split("/").filter(Boolean).pop() || "";
       const matchesName = p.name.toLowerCase().includes(searchQuery);
@@ -52,7 +52,7 @@ export default async function Home({
           Gotta Catch &apos;Em All!
         </h1>
         <p className="text-xs sm:text-sm text-slate-400 text-center max-w-md mb-4">
-          Search over 100 Pokémon by name or ID, view base stats, types, moves, and evolutions.
+          Search over 500 Pokémon by name or ID, view base stats, types, moves, and evolutions.
         </p>
         <SearchBar />
       </div>

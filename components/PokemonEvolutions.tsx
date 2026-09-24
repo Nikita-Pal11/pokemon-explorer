@@ -88,9 +88,9 @@ export const PokemonEvolutions: React.FC<PokemonEvolutionsProps> = ({
       <div className="mt-6 flex justify-end">
         <Link
           href="/"
-          className="rounded-xl bg-purple-600 px-5 py-2.5 text-sm font-extrabold text-white shadow-lg transition-all hover:bg-purple-700 hover:shadow-purple-500/20"
+          className="flex items-center gap-1 sm:gap-1.5 rounded-lg sm:rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-[11px] sm:text-xs font-bold text-white shadow-md sm:shadow-lg shadow-purple-500/20 transition-all hover:scale-105 active:scale-95"
         >
-          Explore More Pokémon
+          Explore More Pokemon
         </Link>
       </div>
     </div>

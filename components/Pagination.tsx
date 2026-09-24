@@ -37,7 +37,7 @@ function Pagination({
             <Link
               href={createPageUrl(currentPage - 1)}
               aria-label="Previous Page"
-              className="flex h-11 items-center gap-2 rounded-xl border border-white/15 bg-slate-900/80 px-4 text-xs font-bold text-slate-200 shadow-xl backdrop-blur-md transition-all hover:scale-105 hover:border-purple-500 hover:bg-purple-600 hover:text-white"
+              className="flex items-center gap-1 sm:gap-1.5 rounded-lg sm:rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-[11px] sm:text-xs font-bold text-white shadow-md sm:shadow-lg shadow-purple-500/20 transition-all hover:scale-105 active:scale-95"
             >
               <FiChevronLeft className="h-5 w-5" /> Previous
             </Link>
@@ -49,8 +49,9 @@ function Pagination({
         </div>
 
         <div className="rounded-xl border border-white/10 bg-slate-900/60 px-4 py-2 text-xs font-semibold text-slate-300 backdrop-blur-md">
-          Page <span className="font-extrabold text-purple-400">{currentPage}</span> of{" "}
-          <span className="font-extrabold text-slate-200">{totalPages}</span>
+          Page{" "}
+          <span className="font-extrabold text-purple-400">{currentPage}</span>{" "}
+          of <span className="font-extrabold text-slate-200">{totalPages}</span>
         </div>
 
         <div className="shrink-0">
@@ -58,7 +59,7 @@ function Pagination({
             <Link
               href={createPageUrl(currentPage + 1)}
               aria-label="Next Page"
-              className="flex h-11 items-center gap-2 rounded-xl border border-white/15 bg-slate-900/80 px-4 text-xs font-bold text-slate-200 shadow-xl backdrop-blur-md transition-all hover:scale-105 hover:border-purple-500 hover:bg-purple-600 hover:text-white"
+              className="flex items-center gap-1 sm:gap-1.5 rounded-lg sm:rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-[11px] sm:text-xs font-bold text-white shadow-md sm:shadow-lg shadow-purple-500/20 transition-all hover:scale-105 active:scale-95"
             >
               Next <FiChevronRight className="h-5 w-5" />
             </Link>
