@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { MdCatchingPokemon } from 'react-icons/md';
-import SearchBar from './SearchBar';
 
 function Header() {
   return (
@@ -13,9 +12,6 @@ function Header() {
             Pokemon Center
           </span>
         </Link>
-        <div className="flex-1 max-w-md flex justify-end">
-          <SearchBar />
-        </div>
       </div>
     </header>
   );

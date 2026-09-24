@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pokédex Explorer",
+  title: "Pokemon Center",
   description: "Explore Pokémon stats, types, and details",
 };
 

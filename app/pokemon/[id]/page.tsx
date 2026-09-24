@@ -69,7 +69,10 @@ export default async function PokemonDetailPage({ params }: PageProps) {
 
         <div className="mb-6 text-center">
           <h1 className="text-3xl font-extrabold capitalize tracking-tight sm:text-4xl">
-            {pokemon.name} <span className="font-mono font-medium text-slate-400">{formattedId}</span>
+            {pokemon.name}{" "}
+            <span className="font-mono font-medium text-slate-400">
+              {formattedId}
+            </span>
           </h1>
         </div>
 
