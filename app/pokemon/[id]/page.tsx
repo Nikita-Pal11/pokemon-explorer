@@ -16,6 +16,12 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
+export async function generateStaticParams() {
+  return Array.from({ length: 20 }, (_, i) => ({
+    id: String(i + 1),
+  }));
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
   const pokemon: PokemonDetails | null = await getPokemonById(id);

@@ -64,7 +64,7 @@ export const PokemonEvolutions: React.FC<PokemonEvolutionsProps> = ({
   return (
     <div className="mt-6 rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-xl backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/80">
       <h3 className="mb-6 text-lg font-extrabold tracking-tight text-slate-800 dark:text-slate-100">
-        Navigation & Chain
+        Evolutions
       </h3>
 
       <div className="flex flex-col items-center justify-around gap-6 sm:flex-row">
