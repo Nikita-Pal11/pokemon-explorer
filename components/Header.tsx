@@ -15,7 +15,7 @@ function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-md transition-all">
+    <header className="sticky top-0 z-50 w-full border-b border-purple-500/15 bg-gradient-to-r from-slate-950/80 via-purple-950/40 to-slate-950/80 backdrop-blur-xl transition-all shadow-lg shadow-purple-950/20">
       <div className="mx-auto flex h-14 sm:h-16 max-w-7xl items-center justify-between gap-1 sm:gap-4 px-2.5 sm:px-6">
         <Link
           href="/"
