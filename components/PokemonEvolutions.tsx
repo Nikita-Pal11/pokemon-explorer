@@ -62,8 +62,10 @@ export const PokemonEvolutions: React.FC<PokemonEvolutionsProps> = ({
   image,
 }) => {
   return (
-    <div className="mt-8 rounded-2xl bg-slate-800/90 p-6 text-white shadow-xl">
-      <h3 className="mb-6 text-lg font-extrabold tracking-tight">Evolutions</h3>
+    <div className="mt-6 rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-xl backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/80">
+      <h3 className="mb-6 text-lg font-extrabold tracking-tight text-slate-800 dark:text-slate-100">
+        Navigation & Chain
+      </h3>
 
       <div className="flex flex-col items-center justify-around gap-6 sm:flex-row">
         {prevPokemon && (
@@ -86,7 +88,7 @@ export const PokemonEvolutions: React.FC<PokemonEvolutionsProps> = ({
       <div className="mt-6 flex justify-end">
         <Link
           href="/"
-          className="rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-extrabold text-white shadow-md transition-all hover:bg-orange-600 hover:shadow-orange-500/20"
+          className="rounded-xl bg-purple-600 px-5 py-2.5 text-sm font-extrabold text-white shadow-lg transition-all hover:bg-purple-700 hover:shadow-purple-500/20"
         >
           Explore More Pokémon
         </Link>

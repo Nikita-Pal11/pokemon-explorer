@@ -28,9 +28,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="relative min-h-full flex flex-col bg-slate-950 text-slate-100 font-sans">
+        <img
+          src="/bg.webp"
+          className="-z-10 fixed inset-0 h-full w-full opacity-20 object-cover pointer-events-none"
+          alt=""
+        />
         <Header />
-        {children}
+        <div className="flex-1">{children}</div>
       </body>
     </html>
   );

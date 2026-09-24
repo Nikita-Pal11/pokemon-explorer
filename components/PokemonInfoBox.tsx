@@ -16,47 +16,59 @@ export const PokemonInfoBox: React.FC<PokemonInfoBoxProps> = ({
   abilities = [],
 }) => {
   return (
-    <div className="rounded-2xl bg-sky-500 p-5 text-white shadow-lg">
+    <div className="rounded-2xl border border-slate-200/80 bg-white/80 p-5 shadow-xl backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/80">
       <div className="grid grid-cols-2 gap-y-4 text-sm">
         <div>
-          <span className="block text-xs font-semibold text-sky-100 uppercase tracking-wider">
+          <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">
             Height
           </span>
-          <span className="text-black text-base">{heightStr}</span>
+          <span className="text-base font-bold text-slate-800 dark:text-slate-100">{heightStr}</span>
         </div>
 
         <div>
-          <span className="block text-xs font-semibold text-sky-100 uppercase tracking-wider">
+          <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">
             Category
           </span>
-          <span className=" text-base text-black">{category}</span>
+          <span className="text-base font-bold text-slate-800 dark:text-slate-100">{category}</span>
         </div>
 
         <div>
-          <span className="block text-xs font-semibold text-sky-100 uppercase tracking-wider">
+          <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">
             Weight
           </span>
-          <span className=" text-base text-black">{weightLbs} lbs</span>
+          <span className="text-base font-bold text-slate-800 dark:text-slate-100">{weightLbs} lbs</span>
         </div>
 
         <div>
-          <span className="block text-xs font-semibold text-sky-100 uppercase tracking-wider">
+          <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">
             Abilities
           </span>
-          <div className="flex flex-col capitalize text-black">
+          <div className="flex flex-wrap gap-1">
             {abilities.map((a) => (
-              <span key={a.ability.name}>{a.ability.name.replace("-", " ")}</span>
+              <span
+                key={a.ability.name}
+                className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-xs font-medium capitalize text-slate-700 dark:bg-slate-800 dark:text-slate-200"
+              >
+                {a.ability.name.replace("-", " ")}
+                {a.is_hidden && (
+                  <span className="text-[10px] text-purple-500 dark:text-purple-400 font-bold">(Hidden)</span>
+                )}
+              </span>
             ))}
           </div>
         </div>
 
         <div>
-          <span className="block text-xs font-semibold text-sky-100 uppercase tracking-wider mb-1">
-            Gender
+          <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">
+            Gender Ratio
           </span>
-          <div className="flex gap-2 text-black">
-            <IoMale className="h-5 w-5" />
-            <IoFemale className="h-5 w-5" />
+          <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+            <span className="flex items-center gap-0.5 text-xs font-semibold text-blue-500">
+              <IoMale className="h-4 w-4" /> 87.5%
+            </span>
+            <span className="flex items-center gap-0.5 text-xs font-semibold text-pink-500">
+              <IoFemale className="h-4 w-4" /> 12.5%
+            </span>
           </div>
         </div>
       </div>
